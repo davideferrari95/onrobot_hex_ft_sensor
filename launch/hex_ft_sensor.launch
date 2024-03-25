@@ -1,0 +1,12 @@
+<!-- set publish rate and Ethernet DAQ speed (in hertz), max 1000Hz -->
+<!-- set filtering (0 = No filter; 1 = 500 Hz; 2 = 150 Hz; 3 = 50 Hz; 4 = 15 Hz; 5 = 5 Hz; 6 = 1.5 Hz) -->
+<launch>
+
+    <!-- Agruments -->
+    <arg name="IP" default="192.168.12.131"/>
+
+	<!-- OnRobot Hex FT-Sensor Controller -->
+	<node pkg="onrobot" type="etherdaq_node" name="etherdaq_node" output="screen"
+		  args="--address $(arg IP) --rate 100 --filter 3 --frame_id ft_sensor_link"/>
+
+</launch>

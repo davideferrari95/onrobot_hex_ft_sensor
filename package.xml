@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <package>
-  <name>onrobot_hex_ft_sensor</name>
+  <name>onrobot</name>
   <version>1.0.0</version>
-  <description>The onrobot_hex_ft_sensor package</description>
+  <description>The onrobot package</description>
 
   <maintainer email="ros@optoforce.com">OptoForce</maintainer>
 
   <license>BSD</license>
 
   <author email="ros@optoforce.com">OptoForce</author>
-
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>diagnostic_msgs</build_depend>

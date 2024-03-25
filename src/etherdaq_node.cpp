@@ -71,7 +71,7 @@ void zeroFunction(const std_msgs::Bool &msg)
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "etherdaq_node");
+    ros::init(argc, argv, "onrobot_hex_ft_sensor_node");
     ros::NodeHandle nh;
 
     unsigned int pub_rate_hz;
@@ -124,10 +124,10 @@ int main(int argc, char **argv)
 
     etherdaq = new onrobot_hex_ft_sensor::EtherDAQDriver(address, pub_rate_hz, filter_hz);
 
-    std::string topicName = "ethdaq_data";
+    std::string topicName = "ft_sensor_data";
 
     ros::Publisher pub;
-    ros::Subscriber sub = nh.subscribe("ethdaq_zero", 1000, zeroFunction);
+    ros::Subscriber sub = nh.subscribe("ft_sensor_zero", 1000, zeroFunction);
     if (publish_wrench)
     {
         pub = nh.advertise<geometry_msgs::Wrench>(topicName, 1);

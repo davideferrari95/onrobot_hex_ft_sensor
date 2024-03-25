@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(onrobot_hex_ft_sensor)
+project(onrobot)
 
 find_package(catkin REQUIRED COMPONENTS
   cmake_modules
@@ -34,8 +34,6 @@ add_executable(etherdaq_node src/etherdaq_node.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(etherdaq_node onrobot_hex_driver)
-
-
 
 #############
 ## Install ##
